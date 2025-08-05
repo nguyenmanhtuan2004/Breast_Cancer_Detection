@@ -143,8 +143,8 @@ def add_predictions(input_data):
     else:
         st.write("<span class='diagnosis malicious'>Malicious</span>",unsafe_allow_html=True)
 
-    st.write("Probability of being benign: ",model.predict_proba(input_array_scaled)[0][0])
-    st.write("Probability of being malicious: ",model.predict_proba(input_array_scaled)[0][1])
+    st.write("Probability of being benign: ",round(model.predict_proba(input_array_scaled)[0][0],2))
+    st.write("Probability of being malicious: ",round(model.predict_proba(input_array_scaled)[0][1],2))
 
 def main():
     st.set_page_config(
